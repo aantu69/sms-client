@@ -47,8 +47,7 @@
         "../node_modules/icheck/icheck.js",
         "../node_modules/admin-lte/dist/js/app.js",
         "assets/js/adminLTEOptions.js",
-        "assets/js/scripts.js",
-        "assets/js/login.js"
+        "assets/js/scripts.js"
 
       ],
       "environmentSource": "environments/environment.ts",

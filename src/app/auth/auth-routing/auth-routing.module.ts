@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AuthComponent } from './../auth.component';
 import { RegisterComponent } from './../register/register.component';
 import { LoginComponent } from './../login/login.component';
+import { EmployeeComponent } from './../employee/employee.component';
 
 @NgModule({
   imports: [
@@ -25,6 +26,10 @@ import { LoginComponent } from './../login/login.component';
           {
             path: 'register',
             component: RegisterComponent
+          },
+          {
+            path: 'employee',
+            component: EmployeeComponent
           }
         ]
       }
