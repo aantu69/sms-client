@@ -10,12 +10,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  isLoginError: boolean = false;
+  isLoginError = false;
   constructor(private commonService: CommonService, private router: Router) { }
-  //constructor() { }
+  // constructor() { }
 
   ngOnInit() {
-    //this.resetForm();
+    // this.resetForm();
   }
 
   // resetForm(form?: NgForm) {
@@ -24,9 +24,9 @@ export class LoginComponent implements OnInit {
 
 
   login(userName, password) {
-    
-    var url = "http://localhost:8000/oauth/token";
-    var data = "username="+userName+"&password="+password+"&grant_type=password&client_id=3&client_secret=l4FxqDpIMgybHZuxQqfzbLrKevmrdIZNApbROZCp&scope=*";
+    const url = 'http://localhost:8000/oauth/token';
+    // tslint:disable-next-line:max-line-length
+    const data = 'username=' + userName + '&password=' + password + '&grant_type=password&client_id=2&client_secret=RxaFIb6Fc6gIqPWOAwOA47tzDBrNRoalj1G4cP1Z&scope=*';
     this.commonService.login(url, data)
         .subscribe((res: any) => {
           console.log(userName);

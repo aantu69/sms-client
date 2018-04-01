@@ -6,9 +6,8 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class CommonService {
-  //private _url: string = "../../assets/data/employee.json";
   constructor(private http: HttpClient) { }
-  //constructor() { }
+
 
   getEmployees(url) {
     return this.http.get(url)
@@ -16,10 +15,8 @@ export class CommonService {
   }
 
   login(url, data) {
-    var reqHeaders = new HttpHeaders({'Content-Type': 'application/json'});
+    const reqHeaders = new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'});
     return this.http.post(url, data, {headers: reqHeaders})
       .map(result => result);
   }
 }
-
- 

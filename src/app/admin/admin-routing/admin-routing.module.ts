@@ -4,6 +4,7 @@ import { AdminComponent } from './../admin.component';
 import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { AuthGuard } from '../../auth/auth.guard';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import { RouterModule } from '@angular/router';
       {
         path: 'admin',
         component: AdminComponent,
+        canActivate: [AuthGuard],
         children: [
           {
             path: '',
