@@ -14,10 +14,7 @@ export class EmployeeComponent implements OnInit {
   constructor(private commonService: CommonService) { }
 
   ngOnInit() {
-    this.commonService.getEmployees(this._url)
-        .subscribe(res => {
-          this.employees = res
-        });
+
   }
 
 

@@ -5,6 +5,9 @@ import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AuthGuard } from '../../auth/auth.guard';
+import { MediumIndexComponent } from '../medium-index/medium-index.component';
+import { MediumCreateComponent } from '../medium-create/medium-create.component';
+
 
 @NgModule({
   imports: [
@@ -26,6 +29,14 @@ import { AuthGuard } from '../../auth/auth.guard';
           {
             path: 'dashboard2',
             component: AdminDashboard2Component
+          },
+          {
+            path: 'mediums',
+            component: MediumIndexComponent
+          },
+          {
+            path: 'mediums/create',
+            component: MediumCreateComponent
           }
         ]
       }

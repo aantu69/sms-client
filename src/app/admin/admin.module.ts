@@ -9,6 +9,12 @@ import { AdminComponent } from './admin.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminDashboard2Component } from './admin-dashboard2/admin-dashboard2.component';
+import { MediumIndexComponent } from './medium-index/medium-index.component';
+import { MediumCreateComponent } from './medium-create/medium-create.component';
+// import { MediumEditComponent } from './medium-edit/medium-edit.component';
+// import { ShiftIndexComponent } from './shift-index/shift-index.component';
+// import { ShiftCreateComponent } from './shift-create/shift-create.component';
+// import { ShiftEditComponent } from './shift-edit/shift-edit.component';
 
 @NgModule({
   imports: [
@@ -23,7 +29,9 @@ import { AdminDashboard2Component } from './admin-dashboard2/admin-dashboard2.co
     AdminFooterComponent,
     AdminControlSidebarComponent,
     AdminDashboard1Component,
-    AdminDashboard2Component
+    AdminDashboard2Component, 
+    MediumIndexComponent,
+    MediumCreateComponent
   ],
   exports: [AdminComponent]
 })
