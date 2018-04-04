@@ -9,12 +9,12 @@ import { AdminComponent } from './admin.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminDashboard2Component } from './admin-dashboard2/admin-dashboard2.component';
-import { MediumIndexComponent } from './medium-index/medium-index.component';
-import { MediumCreateComponent } from './medium-create/medium-create.component';
-// import { MediumEditComponent } from './medium-edit/medium-edit.component';
-// import { ShiftIndexComponent } from './shift-index/shift-index.component';
-// import { ShiftCreateComponent } from './shift-create/shift-create.component';
-// import { ShiftEditComponent } from './shift-edit/shift-edit.component';
+import { MediumIndexComponent } from './mediums/medium-index/medium-index.component';
+import { MediumCreateComponent } from './mediums/medium-create/medium-create.component';
+import { MediumEditComponent } from './mediums/medium-edit/medium-edit.component';
+import { ShiftIndexComponent } from './shifts/shift-index/shift-index.component';
+import { ShiftCreateComponent } from './shifts/shift-create/shift-create.component';
+import { ShiftEditComponent } from './shifts/shift-edit/shift-edit.component';
 
 @NgModule({
   imports: [
@@ -29,9 +29,9 @@ import { MediumCreateComponent } from './medium-create/medium-create.component';
     AdminFooterComponent,
     AdminControlSidebarComponent,
     AdminDashboard1Component,
-    AdminDashboard2Component, 
-    MediumIndexComponent,
-    MediumCreateComponent
+    AdminDashboard2Component,
+    MediumIndexComponent, MediumCreateComponent, MediumEditComponent,
+    ShiftIndexComponent, ShiftCreateComponent, ShiftEditComponent,
   ],
   exports: [AdminComponent]
 })

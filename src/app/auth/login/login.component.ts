@@ -33,29 +33,10 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/admin']);
         },
         err => {
-          console.log(err)
+          console.log(err);
           this.errMsg = err;
         }
-      )
+      );
 
   }
-
-
-  // login(userName, password) {
-  //   const url = 'http://localhost:8000/oauth/token';
-  //   // tslint:disable-next-line:max-line-length
-  //   const data = 'username=' + userName + '&password=' + password + '&grant_type=password&client_id=2&client_secret=RxaFIb6Fc6gIqPWOAwOA47tzDBrNRoalj1G4cP1Z&scope=*';
-  //   this.commonService.login(url, data)
-  //       .subscribe((res: any) => {
-  //         console.log(userName);
-  //         localStorage.setItem('access_token', res.access_token);
-  //         this.router.navigate(['/admin']);
-  //       },
-  //       (err: HttpErrorResponse) => {
-  //         console.log(err);
-  //         this.isLoginError = true;
-  //       }
-  //     );
-  // }
-
 }

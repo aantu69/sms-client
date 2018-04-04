@@ -5,8 +5,12 @@ import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AuthGuard } from '../../auth/auth.guard';
-import { MediumIndexComponent } from '../medium-index/medium-index.component';
-import { MediumCreateComponent } from '../medium-create/medium-create.component';
+import { MediumIndexComponent } from '../mediums/medium-index/medium-index.component';
+import { MediumCreateComponent } from '../mediums/medium-create/medium-create.component';
+import { MediumEditComponent } from '../mediums/medium-edit/medium-edit.component';
+import { ShiftIndexComponent } from '../shifts/shift-index/shift-index.component';
+import { ShiftCreateComponent } from '../shifts/shift-create/shift-create.component';
+import { ShiftEditComponent } from '../shifts/shift-edit/shift-edit.component';
 
 
 @NgModule({
@@ -17,27 +21,15 @@ import { MediumCreateComponent } from '../medium-create/medium-create.component'
         component: AdminComponent,
         canActivate: [AuthGuard],
         children: [
-          {
-            path: '',
-            redirectTo: 'dashboard1',
-            pathMatch: 'full'
-          },
-          {
-            path: 'dashboard1',
-            component: AdminDashboard1Component
-          },
-          {
-            path: 'dashboard2',
-            component: AdminDashboard2Component
-          },
-          {
-            path: 'mediums',
-            component: MediumIndexComponent
-          },
-          {
-            path: 'mediums/create',
-            component: MediumCreateComponent
-          }
+          { path: '', redirectTo: 'dashboard1', pathMatch: 'full' },
+          { path: 'dashboard1', component: AdminDashboard1Component },
+          { path: 'dashboard2', component: AdminDashboard2Component },
+          { path: 'mediums', component: MediumIndexComponent },
+          { path: 'mediums/create', component: MediumCreateComponent },
+          { path: 'mediums/edit', component: MediumEditComponent },
+          { path: 'shifts', component: ShiftIndexComponent },
+          { path: 'shifts/create', component: ShiftCreateComponent },
+          { path: 'shifts/edit', component: ShiftEditComponent },
         ]
       }
     ])
